@@ -10,7 +10,8 @@ const formEvents = (user) => {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
         language: document.querySelector('#language').value,
-        uid: `${user.uid}`
+        uid: `${user.uid}`,
+        date: new Date()
       };
       console.warn(payload);
       createCard(payload).then(({ name }) => {
