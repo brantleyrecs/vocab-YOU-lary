@@ -1,7 +1,5 @@
 import renderToDom from '../utils/renderToDom';
 
-const endPoint = 'https://vocab-you-lary-425b0-default-rtdb.firebaseio.com/';
-
 const filterBtn = () => {
   const domString = `
     <button id="html" type="button" class="btn btn-outline-light">HTML</button>
@@ -11,23 +9,23 @@ const filterBtn = () => {
   renderToDom('#filters', domString);
 };
 
-const filter = (language) => new Promise((resolve, reject) => {
-  fetch(`${endPoint}/Entries.json?orderBy="language"&equalTo="${language}"`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-    .then((Response) => Response.json())
-    .then((data) => {
-      if (data) {
-        resolve(Object.values(data));
-      } else {
-        resolve([]);
-      }
-    })
+// const filter = (language) => new Promise((resolve, reject) => {
+//   fetch(`${endPoint}/Entries.json?orderBy="language"&equalTo="${language}"`, {
+//     method: 'GET',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//   })
+//     .then((Response) => Response.json())
+//     .then((data) => {
+//       if (data) {
+//         resolve(Object.values(data));
+//       } else {
+//         resolve([]);
+//       }
+//     })
 
-    .catch(reject);
-});
+//     .catch(reject);
+// });
 
-export { filterBtn, filter };
+export default filterBtn;

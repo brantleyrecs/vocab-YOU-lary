@@ -1,6 +1,6 @@
 import clearDom from '../utils/clearDom';
 import renderToDom from '../utils/renderToDom';
-import { filterBtn } from '../events/filters';
+import filterBtn from '../events/filters';
 
 const emptyCards = () => {
   const domString = '<h1>No vocab-YOU-lary Cards</h1>';

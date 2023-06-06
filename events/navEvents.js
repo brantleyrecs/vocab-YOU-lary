@@ -9,6 +9,14 @@ const navEvents = (user) => {
     console.warn('Clicked all cards');
     getCards(user.uid).then(viewCards);
   });
+
+  document.querySelector('#filters').addEventListener('click', (e) => {
+    const language = e.target.id;
+    getCards(user.uid).then((cards) => {
+      const filteredCards = cards.filter((card) => card.language === language);
+      viewCards(filteredCards);
+    });
+  });
 };
 
 export default navEvents;

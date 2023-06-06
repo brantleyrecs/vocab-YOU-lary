@@ -2,6 +2,7 @@ import { deleteCard, getCards, getSingleCard } from '../api/vocabData';
 import { viewCards } from '../pages/cards';
 import addCardForm from '../pages/entryForm';
 // import { filter } from './filters';
+// import { filter } from './filters';
 
 const domEvents = (user) => {
   document.querySelector('#main-div').addEventListener('click', (e) => {
