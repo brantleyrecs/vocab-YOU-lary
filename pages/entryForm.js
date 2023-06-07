@@ -9,10 +9,9 @@ const addCardForm = (obj = {}) => {
       <div class="mb-3">
         <label for="title">Title</label>
         <input type="text" class="form-control" id="title" aria-describedby="cardHelp" placeholder="Card Title" value="${obj.title || ''}" required>
-        <div id="titleHelp" class="form-text">Title</div>
       </div>
       <div class="mb-3">
-        <label for="definition" class="form-control">Definition</label>
+        <label for="definition">Definition</label>
         <textarea class="form-control" placeholder="Card Definition" id="definition" style="height: 150px" value="${obj.definition || ''}" required></textarea>
       </div>
       <select id="language" class="form-select" aria-label="Default select example">
@@ -21,7 +20,7 @@ const addCardForm = (obj = {}) => {
         <option value="css" ${obj.language ? 'checked' : ''}>CSS</option>
         <option value="javascript" ${obj.language ? 'checked' : ''}>Javascript</option>
       </select>
-      <button id="submit-card" type="submit" class="btn btn-primary">Submit</button>
+      <button id="submit-card" type="submit" class="btn btn-outline-light me-2 submit-btn">Submit</button>
     </form>
   `;
 

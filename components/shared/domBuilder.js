@@ -6,8 +6,10 @@ const domBuilder = () => {
     <div id="navbar"></div>
     <div id="login-page"></div>
     <div id="filters"></div>
-    <div id="entries-page"></div>
-    <div id="form-page"></div>
+    <div id="entries-page" class="d-flex justify-content-evenly flex-wrap"></div>
+    <div class="position-relative">
+      <div id="form-page" class="w-50 p-3"></div>
+    </div>
   </div>
   `;
 
