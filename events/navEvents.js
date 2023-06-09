@@ -17,6 +17,14 @@ const navEvents = (user) => {
       viewCards(filteredCards);
     });
   });
+
+  document.querySelector('#most-recent').addEventListener('click', (e) => {
+    const alphaTitle = e.target.id;
+    getCards(user.uid).then((cards) => {
+      const sortedCards = cards.sort((card) => card.title === alphaTitle);
+      viewCards(sortedCards);
+    });
+  });
 };
 
 export default navEvents;
