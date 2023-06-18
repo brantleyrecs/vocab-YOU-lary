@@ -10,6 +10,7 @@ const emptyCards = () => {
 
 const viewCards = (array) => {
   clearDom();
+  sortButton();
 
   let domString = '';
   array.forEach((item) => {
@@ -29,7 +30,6 @@ const viewCards = (array) => {
   });
 
   filterBtn();
-  sortButton();
   renderToDom('#entries-page', domString);
 };
 

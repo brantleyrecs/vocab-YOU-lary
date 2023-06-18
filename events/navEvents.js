@@ -17,12 +17,13 @@ const navEvents = (user) => {
       viewCards(filteredCards);
     });
   });
-
-  document.querySelector('#most-recent').addEventListener('click', (e) => {
-    const alphaTitle = e.target.id;
+  document.querySelector('#sort').addEventListener('click', (e) => {
+    const sorting = e.target.id;
     getCards(user.uid).then((cards) => {
-      const sortedCards = cards.sort((card) => card.title === alphaTitle);
-      viewCards(sortedCards);
+      if (sorting === user.title) {
+        const sortedCards = cards.sort((card) => card.title);
+        viewCards(sortedCards);
+      }
     });
   });
 };
