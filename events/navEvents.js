@@ -17,6 +17,15 @@ const navEvents = (user) => {
       viewCards(filteredCards);
     });
   });
+  document.querySelector('#sort').addEventListener('click', (e) => {
+    const sorting = e.target.id;
+    getCards(user.uid).then((cards) => {
+      if (sorting === user.title) {
+        const sortedCards = cards.sort((card) => card.title);
+        viewCards(sortedCards);
+      }
+    });
+  });
 };
 
 export default navEvents;

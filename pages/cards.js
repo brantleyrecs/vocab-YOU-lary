@@ -1,6 +1,7 @@
 import clearDom from '../utils/clearDom';
 import renderToDom from '../utils/renderToDom';
 import filterBtn from '../events/filters';
+import sortButton from '../events/sort';
 
 const emptyCards = () => {
   const domString = '<h1>No vocab-YOU-lary Cards</h1>';
@@ -9,6 +10,7 @@ const emptyCards = () => {
 
 const viewCards = (array) => {
   clearDom();
+  sortButton();
 
   let domString = '';
   array.forEach((item) => {
